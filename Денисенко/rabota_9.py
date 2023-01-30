@@ -13,7 +13,7 @@ with open("MusinVvod.txt", "w") as file:
     except ValueError:
         print("не верная размерность массива, попробуй еще")
 
-    arr = sample(range(1,200), r) #генерим случайные неповторяющиеся значения в массиве
+    arr = sample(range(1,200), r) #генерируем случайные неповторяющиеся значения в массиве
 
     for i in range(len(arr)):
         file.write(str(arr[i]) + " ")
@@ -42,7 +42,7 @@ with open('Musinvivod.txt', 'w') as file:
 print("--------------------------2th part----------------------------------------------------------------")
 #Expected array generted by code below
 
-with open("MusinVvod2.txt", "w") as file:#here we're generating array and write its in file
+with open("MusinVvod2.txt", "w") as file:#здесь мы генерируем массив и записываем его в файл
     print("файл MusinVvod2.txt с массивом создан в папке с исходником проекта"+"\n")
     arr= []
     r = 0
@@ -57,7 +57,7 @@ with open("MusinVvod2.txt", "w") as file:#here we're generating array and write 
         print("Размерность массива введена неверно, попробуйте снова...")
 
     for i in range(r+1):
-        secArr = sample(range(1, 200), c)  # random unique number from 1,100
+        secArr = sample(range(1, 200), c)
         arr.append(secArr)
     for i in range(len(arr)-1):
         for j in range(c):
@@ -68,9 +68,9 @@ with open("Musinvvod2.txt", "r") as file:#тут мы выводим масси�
     lines = file.readlines()
     for i in range(len(lines)):
         lines[i] = lines[i].strip().split(' ')#каждую строку в лайнс обрезали по бокам от лишних символов(strip) и вставили числа которые находятся между пробелами(split)
-        lines[i] = list(map(int, lines[i])) #сконевртировали каждый элемент строки из str в int
+        lines[i] = list(map(int, lines[i])) #сконвертировали каждый элемент строки из str в int
         print(lines[i])
-#-----------------------handling with array------------------------------------
+#-----------------------работа с массивом------------------------------------
     for i in range(len(lines)):
         if min(lines[i]) % 2 == 0:
             lines[i][lines[i].index(min(lines[i]))] = 0 #если результат деления без остатка то замена на 0
